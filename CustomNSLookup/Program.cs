@@ -19,6 +19,14 @@ namespace CustomNSLookup
                     foreach (IPAddress ip in ipAddreses)
                     {
                         Console.WriteLine(ip);
+                        Byte[] ipBytes = ip.GetAddressBytes();
+                        Console.Write("Binary ip: ");
+                        foreach (byte b in ipBytes)
+                        {
+                            Console.Write(Convert.ToString(b, 2)+" ");
+                        }
+                        Console.WriteLine(Environment.NewLine);
+                        
                     }
                     
                 }
